@@ -1,0 +1,26 @@
+/* Mobile-first styles for TrackEase prototype */
+:root{
+  --bg:#f7f7fb; --card:#fff; --accent:#2b6cb0; --muted:#666; --danger:#e53e3e;
+}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif; margin:0; background:var(--bg); color:#111}
+.app-header{background:linear-gradient(90deg,var(--accent),#4c7bd9); color:white; padding:18px}
+.app-header h1{margin:0; font-size:18px}
+.app-header .tag{margin:6px 0 0; font-size:12px; opacity:.95}
+.container{padding:12px; max-width:480px; margin:8px auto}
+.card{background:var(--card); padding:12px; margin-bottom:12px; border-radius:8px; box-shadow:0 1px 3px rgba(10,10,10,.05)}
+h2{margin:0 0 8px;font-size:16px}
+.form label{display:block; font-size:13px; margin-bottom:8px}
+.form input, .form select{width:100%; padding:8px; margin-top:6px; border:1px solid #e3e6ee; border-radius:6px}
+button{display:inline-block; background:var(--accent); color:white; border:none; padding:10px 12px; border-radius:8px; cursor:pointer}
+button:active{transform:translateY(1px)}
+.list{display:flex; flex-direction:column; gap:8px}
+.item{display:flex; justify-content:space-between; align-items:center; padding:8px; border-radius:6px; background:#fbfcff}
+.item .meta{font-size:13px}
+.small{font-size:13px}
+.muted{color:var(--muted)}
+.danger{color:var(--danger)}
+@media(min-width:700px){
+  .container{display:grid; grid-template-columns:1fr 1fr; gap:12px; max-width:900px}
+  #inventory-section, #report-section{grid-column:2}
+}

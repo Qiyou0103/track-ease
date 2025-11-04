@@ -1,0 +1,211 @@
+/* Mobile-first styles for TrackEase prototype */
+:root{
+  --bg:#f7f7fb; 
+  --card:#fff; 
+  --accent:#2b6cb0; 
+  --muted:#666; 
+  --danger:#e53e3e;
+}
+
+*{box-sizing:border-box}
+
+body{
+  font-family:Segoe UI, Roboto, Arial, sans-serif; 
+  margin:0; 
+  background:var(--bg); 
+  color:#111
+}
+
+.app-header{
+  background:linear-gradient(90deg,var(--accent),#4c7bd9); 
+  color:white; 
+  padding:18px
+}
+
+.app-header h1{
+  margin:0; 
+  font-size:18px
+}
+
+.app-header .tag{
+  margin:6px 0 0; 
+  font-size:12px; 
+  opacity:.95
+}
+
+/* Navigation */
+.main-nav{
+  background:#fff;
+  border-bottom:1px solid #e3e6ee;
+  padding:8px;
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  white-space:nowrap;
+}
+
+.main-nav a{
+  display:inline-block;
+  padding:8px 16px;
+  text-decoration:none;
+  color:#333;
+  border-radius:6px;
+  font-size:14px;
+  transition:background 0.2s;
+}
+
+.main-nav a:hover{
+  background:#f0f0f0;
+}
+
+.main-nav a.active{
+  background:var(--accent);
+  color:white;
+}
+
+.container{
+  padding:12px; 
+  max-width:480px; 
+  margin:8px auto
+}
+
+.card{
+  background:var(--card); 
+  padding:12px; 
+  margin-bottom:12px; 
+  border-radius:8px; 
+  box-shadow:0 1px 3px rgba(10,10,10,.05)
+}
+
+h2{
+  margin:0 0 8px;
+  font-size:16px
+}
+
+.form label{
+  display:block; 
+  font-size:13px; 
+  margin-bottom:8px
+}
+
+.form input, .form select{
+  width:100%; 
+  padding:8px; 
+  margin-top:6px; 
+  border:1px solid #e3e6ee; 
+  border-radius:6px
+}
+
+button{
+  display:inline-block; 
+  background:var(--accent); 
+  color:white; 
+  border:none; 
+  padding:10px 12px; 
+  border-radius:8px; 
+  cursor:pointer;
+  font-size:14px;
+}
+
+button:active{
+  transform:translateY(1px)
+}
+
+button:hover{
+  opacity:0.9;
+}
+
+.list{
+  display:flex; 
+  flex-direction:column; 
+  gap:8px
+}
+
+.item{
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  padding:8px; 
+  border-radius:6px; 
+  background:#fbfcff
+}
+
+.item .meta{
+  font-size:13px;
+  flex:1;
+}
+
+.item button{
+  padding:6px 10px;
+  font-size:12px;
+}
+
+.small{
+  font-size:13px
+}
+
+.muted{
+  color:var(--muted)
+}
+
+.danger{
+  color:var(--danger)
+}
+
+/* Stats grid for dashboard */
+.stats-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.stat-card{
+  background:#fbfcff;
+  padding:12px;
+  border-radius:6px;
+  text-align:center;
+}
+
+.stat-label{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+.stat-value{
+  font-size:24px;
+  font-weight:bold;
+  color:var(--accent);
+}
+
+.stat-value.small{
+  font-size:16px;
+}
+
+/* Summary grid for reports */
+.summary-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+}
+
+.app-footer{
+  text-align:center;
+  padding:12px;
+  color:var(--muted);
+}
+
+/* Desktop layout */
+@media(min-width:700px){
+  .container{
+    max-width:900px
+  }
+  
+  .stats-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  
+  .summary-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}

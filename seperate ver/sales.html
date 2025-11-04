@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrackEase — Sales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>TrackEase (Prototype)</h1>
+    <p class="tag">Mobile-first prototype for sales, inventory & payments</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Dashboard</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="add-product.html">Add Product</a>
+    <a href="sales.html" class="active">Sales</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+
+  <main class="container">
+    <section class="card" id="sales-section">
+      <h2>Record Sale</h2>
+      <div class="form">
+        <label>Select product
+          <select id="sale-product"></select>
+        </label>
+        <label>Quantity
+          <input id="sale-qty" type="number" min="1" value="1" />
+        </label>
+        <button id="record-sale" type="button">Sell</button>
+      </div>
+      <div id="message-output" class="small muted"></div>
+    </section>
+
+    <section class="card" id="recent-sales-section">
+      <h2>Recent Sales</h2>
+      <div id="recent-sales-list" class="list"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Prototype — data stored locally in your browser (localStorage)</small>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="sales.js"></script>
+</body>
+</html>

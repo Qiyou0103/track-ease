@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrackEase — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>TrackEase (Prototype)</h1>
+    <p class="tag">Mobile-first prototype for sales, inventory & payments</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="add-product.html">Add Product</a>
+    <a href="sales.html">Sales</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+
+  <main class="container">
+    <section class="card" id="setup-section">
+      <h2>Business Setup</h2>
+      <form id="setup-form" class="form">
+        <label>Business name
+          <input id="biz-name" placeholder="e.g., Jalan Kopitiam" />
+        </label>
+        <label>Currency
+          <input id="currency" placeholder="RM" />
+        </label>
+        <button type="button" id="save-setup">Save setup</button>
+      </form>
+      <div id="message-output" class="small muted"></div>
+    </section>
+
+    <section class="card" id="dashboard-section">
+      <h2>Quick Stats</h2>
+      <div id="stats-display" class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Total Products</div>
+          <div class="stat-value" id="stat-products">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Total Sales</div>
+          <div class="stat-value" id="stat-sales">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Low Stock Items</div>
+          <div class="stat-value danger" id="stat-low-stock">0</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Prototype — data stored locally in your browser (localStorage)</small>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

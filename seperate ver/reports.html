@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrackEase — Reports</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>TrackEase (Prototype)</h1>
+    <p class="tag">Mobile-first prototype for sales, inventory & payments</p>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html">Dashboard</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="add-product.html">Add Product</a>
+    <a href="sales.html">Sales</a>
+    <a href="reports.html" class="active">Reports</a>
+  </nav>
+
+  <main class="container">
+    <section class="card" id="report-section">
+      <h2>Reports</h2>
+      <button id="export-report">Export Sales CSV</button>
+      <div id="report-output" class="small muted"></div>
+    </section>
+
+    <section class="card" id="summary-section">
+      <h2>Sales Summary</h2>
+      <div id="sales-summary" class="summary-grid"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Prototype — data stored locally in your browser (localStorage)</small>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="reports.js"></script>
+</body>
+</html>
